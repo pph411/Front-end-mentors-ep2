@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(215, 51%, 70%);
+    --secondary-color: hsl(178, 100%, 50%);
+    --main-bg: rgb(13, 25, 43);
+    --card-bg: rgb(20, 37, 61);
+    --line: rgb(47, 65, 91);
+    --white: rgb(255, 255, 255);
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    width: 340px;
+    height: 600px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+}
+
+.card .content {
+    width: 85%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: cyan;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+
+.container:hover .overlay {
+    opacity: .6;
+    height: 300px;
+}
+
+.icon {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.container:hover .icon {
+    opacity: 1;
+}
+
+h3,
+a {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+p {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 300;
+    padding: 20px 0 0px 0;
+}
+
+.aditional-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: .1px solid var(--line);
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+}
+
+.price p {
+    color: var(--secondary-color);
+}
+
+.eth-logo img {
+    width: 12px;
+    height: 20px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.time-left img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.card-footer {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding-bottom: 0px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-footer img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.card-footer p {
+    padding: 0 0 0px 10px;
+    vertical-align: middle;
+    font-weight: 300;
+}
+
+.card-footer span a {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--white);
+}
+
+.card-footer span a:hover {
+    color: var(--secondary-color);
+}
+
+@media screen and (min-width: 376px) {
+
+    h3,
+    a {
+        font-size: 22px;
+    }
+}
